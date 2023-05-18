@@ -8,7 +8,7 @@ function App() {
  
 
   const handleDownload = async () => {
-    const res = await fetch(`http://localhost:5000/${_data}`, {
+    const res = await fetch(`https://profound-kitsune-0ad1ca.netlify.app/${_data}`, {
       method: "GET",
     });
     const data = await res.json();
@@ -24,7 +24,7 @@ function App() {
     try {
       const form = new FormData();
       form.append("file", file);
-      const res = await fetch("http://localhost:5000", {
+      const res = await fetch("https://profound-kitsune-0ad1ca.netlify.app", {
         method: "POST",
         body: form,
       });
